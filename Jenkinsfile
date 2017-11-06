@@ -7,7 +7,7 @@ pipeline {
         echo 'Building ...'
       }
     }
-    stage('IT 1') {
+    stage('ITs') {
       parallel {
         stage('IT 1') {
           agent any
@@ -31,7 +31,7 @@ pipeline {
     stage('Release') {
       agent any
       steps {
-        input 'LGTM'
+        input 'LGTM?'
       }
     }
   }
